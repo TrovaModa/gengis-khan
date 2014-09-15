@@ -1,0 +1,25 @@
+{
+  "name"         : "gengis-khan",
+  "version"      : "0.0.0",
+  "author"       : "yawnt <me@yawnt.com>",
+  "description"  : "A MongoDB-style subset query matcher for JS",
+
+  "main"         : "index.js",
+
+  "dependencies" : {
+    "lodash"     : "*",
+    "deep-equal" : "*"
+  },
+
+  "repository"   : {
+    "type" : "git",
+    "url"  : "git://github.com/TrovaModa/gengis-khan.git"
+  },
+
+  "bugs"         : {
+    "url"  : "https://github.com/TrovaModa/gengis-khan/issues"
+  },
+
+  "homepage"     : "https://github.com/TrovaModa/gengis-khan",
+  "license"      : "MIT"
+}
