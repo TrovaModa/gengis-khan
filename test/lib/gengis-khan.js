@@ -79,5 +79,15 @@ describe('gengisKhan', function() {
 
       expect(result).to.eql(null);
     });
+
+    it('should correctly match $ne', function() {
+      var result;
+
+      result = gengisKhan.match(stubs, { id: { $ne: 1 } });
+
+      expect(result).to.be.an(Array);
+      expect(result.length).to.eql(2);
+
+    });
   });
 });
