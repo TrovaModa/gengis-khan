@@ -46,5 +46,38 @@ describe('gengisKhan', function() {
 
       expect(result).to.eql(null);
     });
+
+    it('should correctly match $in', function() {
+      var result;
+
+      result = gengisKhan.match(stubs, { sports: { $in: ['hiking'] } });
+
+      expect(result).to.be.an(Array);
+      expect(result.length).to.eql(2);
+
+      result = gengisKhan.match(stubs, { sports: { $in: [/ing/] } });
+
+      expect(result).to.be.an(Array);
+      expect(result.length).to.eql(3);
+
+      result = gengisKhan.match(stubs, { sports: { $in: ['hiking', 'sleeping'] } });
+
+      expect(result).to.be.an(Array);
+      expect(result.length).to.eql(2);
+
+    });
+
+    it('should correctly match $nin', function() {
+      var result;
+
+      result = gengisKhan.match(stubs, { sports: { $nin: ['hiking'] } });
+
+      expect(result).to.be.an(Array);
+      expect(result.length).to.eql(1);
+
+      result = gengisKhan.match(stubs, { sports: { $nin: [/ing/] } });
+
+      expect(result).to.eql(null);
+    });
   });
 });
