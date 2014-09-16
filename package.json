@@ -11,6 +11,15 @@
     "deep-equal" : "*"
   },
 
+  "devDependencies": {
+    "mocha"      : "*",
+    "expect.js"  : "*"
+  },
+
+  "scripts"      : {
+    "test": "mocha --timeout 20000 --recursive -R spec test/**/*.js"
+  },
+
   "repository"   : {
     "type" : "git",
     "url"  : "git://github.com/TrovaModa/gengis-khan.git"
