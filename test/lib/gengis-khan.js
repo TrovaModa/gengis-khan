@@ -22,6 +22,11 @@ describe('gengisKhan', function() {
 
       expect(result).to.be.an(Array);
       expect(result.length).to.eql(1);
+
+      result = gengisKhan.match(stubs, { id: /\d/ });
+
+      expect(result).to.be.an(Array);
+      expect(result.length).to.eql(3);
     });
 
     it('should correctly match $all', function() {
