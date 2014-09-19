@@ -87,7 +87,15 @@ describe('gengisKhan', function() {
 
       expect(result).to.be.an(Array);
       expect(result.length).to.eql(2);
+    });
 
+    it('should correctly match $and', function() {
+      var result;
+
+      result = gengisKhan.match(stubs, { $and: [ { id: 2 }, { sports: { $nin: ['hiking'] } } ] });
+
+      expect(result).to.be.an(Array);
+      expect(result.length).to.eql(1);
     });
   });
 });
